@@ -163,7 +163,7 @@ export default defineConfig({
   },
   envDir: path.resolve(import.meta.dirname),
   root: path.resolve(import.meta.dirname, "client"),
-  base: process.env.GITHUB_PAGES === 'true' ? '/mohanad-portfolio/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/mohanad-portfolio/' : '/',
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
