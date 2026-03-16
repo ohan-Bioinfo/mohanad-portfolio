@@ -177,7 +177,28 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-[#0D1117] via-transparent to-transparent" />
 
       <div className="container relative z-10 pt-24 pb-16">
-        <div className="max-w-3xl">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
+          {/* Profile photo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            className="shrink-0 order-first lg:order-last lg:ml-auto"
+          >
+            <div className="relative">
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-sky-400 via-teal-400 to-emerald-400 opacity-40 blur-md" />
+              <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-sky-400/40">
+                <img
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663143815567/SuFJZnskbHiwuF9TmMAWz2/profile_df653fa8.jpg"
+                  alt="Mohanad A. Ibrahim"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Text content */}
+          <div className="max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -247,6 +268,7 @@ function Hero() {
               ORCID
             </a>
           </motion.div>
+          </div>
         </div>
       </div>
 
