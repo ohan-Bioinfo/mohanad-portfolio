@@ -417,10 +417,10 @@ const ROLES = [
   },
   {
     icon: <Building2 className="w-5 h-5" />,
-    company: "Genalive Lab (Alfaisalyah Group)",
+    company: "Alfaisalyah Group",
     website: undefined,
     role: "Scientific Business Development",
-    period: "Sep 2024 – Present",
+    period: "Sep 2024 – Sep 2025",
     color: "sky",
     bullets: [
       "Lead design and automation of bioinformatics pipelines for WES, WGS, and transcriptomics.",
