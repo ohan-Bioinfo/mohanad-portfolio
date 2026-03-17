@@ -105,13 +105,16 @@ function Navbar() {
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6">
           {NAV_LINKS.map((link) => (
-            <a
+            <button
               key={link.href}
-              href={link.href}
-              className="text-sm text-slate-400 hover:text-sky-400 transition-colors duration-200 font-medium"
+              onClick={() => {
+                const el = document.getElementById(link.href.replace('#', ''));
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-sm text-slate-400 hover:text-sky-400 transition-colors duration-200 font-medium bg-transparent border-none cursor-pointer"
             >
               {link.label}
-            </a>
+            </button>
           ))}
           <a
             href="mailto:mohanadahmedibrahim@gmail.com"
@@ -139,14 +142,17 @@ function Navbar() {
           className="md:hidden nav-blur border-t border-white/5 px-6 py-4 flex flex-col gap-3"
         >
           {NAV_LINKS.map((link) => (
-            <a
+            <button
               key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="text-slate-300 hover:text-sky-400 text-sm font-medium py-1"
+              onClick={() => {
+                const el = document.getElementById(link.href.replace('#', ''));
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+                setOpen(false);
+              }}
+              className="text-slate-300 hover:text-sky-400 text-sm font-medium py-1 bg-transparent border-none cursor-pointer text-left"
             >
               {link.label}
-            </a>
+            </button>
           ))}
         </motion.div>
       )}
